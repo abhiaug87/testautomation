@@ -11,9 +11,10 @@ export class SelectAccountPage {
 	}
 
 	enterBankAccountDetails =  function(): void {
+		var timestamp = new Date();
 	
 		browser.waitForVisible('//*[@id="accountname-1037-inputEl"]', 5000);
-		browser.setValue('//*[@id="accountname-1037-inputEl"]', 'Testing Account');
+		browser.setValue('//*[@id="accountname-1037-inputEl"]', 'Testing Account'+timestamp.toISOString());
 		browser.click('[data-automationid="accountType"]');
 		browser.click('//*[@id="boundlist-1076-listEl"]/li[2]');
 		browser.setValue('//*[@id="accountnumber-1068-inputEl"]', '123456');

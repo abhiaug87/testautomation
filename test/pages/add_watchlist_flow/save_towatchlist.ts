@@ -2,12 +2,14 @@ export class SaveToWatchlistPage {
 
 	SaveToWatchlist = function(): void {
 
+		browser.waitForVisible('//*[@id="Watchlist_SaveToWatchlistButton"]', 10000);	
 		browser.click('//*[@id="Watchlist_SaveToWatchlistButton"]');
 		
 	}
 
 	Logout = function(): void {
 
+        browser.waitForVisible('//*[@id="container"]/div[1]/div[2]/div/p/a', 10000);
 		browser.click('//*[@id="container"]/div[1]/div[2]/div/p/a');
 	}
 

@@ -5,6 +5,7 @@ export class LandingPage {
 	
 
 		browser.setValue('//*[@id="searchString"]', 'cars for sale')
+		browser.pause(10000);
 	   	browser.click('//*[@id="generalSearch"]/div[2]/button/span');
 	}
 

@@ -3,12 +3,15 @@ export class SelectCarPage {
 
 	selectingCar = function(): void {
 	
-		browser.waitForVisible('//*[@id="SuperFeaturesContainer"]/a[4]/span[2]/span/strong[1]', 5000);
+		browser.waitForVisible('//*[@id="TopLevelCategory1"]', 10000);
+		browser.click('//*[@id="TopLevelCategory1"]');
+		browser.waitForVisible('//*[@id="SuperFeaturesContainer"]/a[4]/span[2]/span/strong[1]', 10000);
 		browser.click('//*[@id="SuperFeaturesContainer"]/a[4]/span[2]/span/strong[1]');
 	}
 
 	verifySelectCarPage = function(): void  {
-
+        
+		expect(browser.isVisible('//*[@id="TopLevelCategory1"]')).toBeTruthy();
 		expect(browser.isVisible('//*[@id="TopLevelCategory2"]')).toBeTruthy();
 		expect(browser.isVisible('//*[@id="TopLevelCategory3"]')).toBeTruthy();
 		expect(browser.isVisible('//*[@id="ExtraTopLevelCategories_ctl01_CategorySearchDiv"]')).toBeTruthy();

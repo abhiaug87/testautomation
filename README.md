@@ -10,7 +10,7 @@
     http://nodejs.org
 2.  Install Java SE Development- version 8 or above
     http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html
-3.	Open a new git bash prompt
+3.	Go to project directory and open a new git bash prompt
 4.	Install typescript globally `npm install -g typescript`
 5.	Install `npx` globally `npm install -g npx`
 6.  Run the command 'npm install wdio-jasmine-framework'
@@ -21,10 +21,9 @@
 
 # Running tests
 
-1.	Open a new git bash prompt
-2.  Go to directory
-3.	Compile the code
+1.	Go to project directory and open a new git bash prompt
+2.	Compile the code
       tsc
-4.	Run the test
+3.	Run the test
       npx wdio --specs
 

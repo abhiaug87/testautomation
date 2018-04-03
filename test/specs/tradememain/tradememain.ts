@@ -7,40 +7,33 @@ describe('Add a car to my watchlist', () => {
 	beforeAll(function () {
 			
 	browser.url('https://www.trademe.co.nz/');
-	browser.pause(10000);
+	browser.pause(5000);
 			
 	 });
 
 	describe('When I am redirected to the login page', () => {
 
 		it('appears on the screen', () => {
-			addCar.loginPage.verifyLoginPage();
+			addCar.loginPage.verifyMainPage();
 			addCar.loginPage.enterLoginCredentials();
+			addCar.loginPage.verifyLoginPage();
 			addCar.loginPage.submitCredentials();
 		});
 	});
 
-	describe('When I pass the username and password', () => {
+	describe('When I enter string in the search field', () => {
 
-		it('redirects me to the landing page', () => {
-			addCar.landingPage.navigateToLandingPage();
+		it('will narrow down the search results with options ', () => {
 			addCar.landingPage.verifyLandingPage();
-			});
+			addCar.landingPage.navigateToLandingPage();
+		});
 	});
 
 	describe('When I enter search criteria in the search bar', () => {
 
 		it('will open the page to select a car ', () => {
-			addCar.selectCarPage.selectingCar();
 			addCar.selectCarPage.verifySelectCarPage();
-		});
-	});
-
-	describe('When I select the car ', () => {
-
-		it('opens the add to watchlist page', () => {
 			addCar.selectCarPage.selectingCar();
-			addCar.selectCarPage.verifySelectCarPage();
 		});
 	});
 

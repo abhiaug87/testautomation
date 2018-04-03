@@ -23,16 +23,12 @@ export class LoginPage {
 	verifyLoginPage = function (): void {
 		browser.waitForVisible('//*[@id="page_email"]', 10000);	
 		expect(browser.isVisible('//*[@id="page_email"]')).toBeTruthy();
-		expect(browser.getText()).toEqual('Email');
 		browser.waitForVisible('//*[@id="page_password"]', 10000);	
 		expect(browser.isVisible('//*[@id="page_password"]')).toBeTruthy();
-		expect(browser.getText()).toEqual('Password');
 		browser.waitForVisible('//*[@id="LoginPageButton"]', 10000);	
 		expect(browser.isVisible('//*[@id="LoginPageButton"]')).toBeTruthy();
-		expect(browser.getText()).toEqual('Log in');
-	};
+         };
 
 
 }
-
 
